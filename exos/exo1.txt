@@ -1,8 +1,7 @@
 *** exo 1 ***
-Créer un composant "citation" qui affichera une citation 
-et son auteur de façon aléatoire, toutes les 10 secondes.
-La liste des citations sera embarquée dans le composant
-en tant que propriété de classe.
+Créer un composant "citation" qui affichera une citation et son auteur.
+Cet affichage se dera de façon aléatoire ou bien séquencielle (le premier élément, puis le second, etc.), toutes les 10 secondes.
+La liste des citations sera embarquée dans le composant en tant que propriété de classe.
 
 exemples de citation: 
 "La femme est l'avenir de l'homme" (Aragon)

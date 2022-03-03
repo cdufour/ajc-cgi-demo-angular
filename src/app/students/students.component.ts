@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent {
+
+  constructor() {
+    setInterval(function() {
+      console.log('ok')
+    }, 5000)
+  }
+
   //students = ['Nassim', 'Yannick', 'Louise'];
   students = [
     { name: 'Nassim', grade: 10},

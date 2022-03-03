@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo-angular';
+  // Propriétés
+  title = 'Formation Angular';
+  total = 23 + 2;
+
+  // Méthodes
+  demo() {
+    return "simple démo";
+  }
 }

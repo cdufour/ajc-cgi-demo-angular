@@ -1,0 +1,15 @@
+p {
+  font-weight: bold;
+}
+
+.author {
+  font-size: 8pt;
+}
+
+/* 
+cette classe "écraserait" - de manière "scoped" la classe bootstrap de même nom, si bootstrap
+était utilisé dans l'application
+*/
+.btn-primary {
+  background-color: #9922FF;
+}

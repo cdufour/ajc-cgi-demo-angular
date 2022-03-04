@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+interface Student {
+  name: string;
+  grade: number;
+}
+
 @Component({
   selector: 'students',
   templateUrl: './students.component.html',
@@ -7,14 +12,8 @@ import { Component } from '@angular/core';
 })
 export class StudentsComponent {
 
-  constructor() {
-    setInterval(function() {
-      console.log('ok')
-    }, 5000)
-  }
-
   //students = ['Nassim', 'Yannick', 'Louise'];
-  students = [
+  students: Student[] = [
     { name: 'Nassim', grade: 10},
     { name: 'Yannick', grade: 2},
     { name: 'Louise', grade: 18.5}

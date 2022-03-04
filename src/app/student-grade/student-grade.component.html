@@ -1,0 +1,15 @@
+<div>
+  Note obtenue: 
+  <span
+    class="grade" 
+    [ngClass]="{'loser': grade < 10, 'winner': grade >= 16}"
+  >
+    {{ grade }}
+  </span>-
+  <span 
+    *ngIf="grade < 10"
+    [ngStyle]="{'font-weight': sanctionStyle}"
+  > 
+    (Sanction à prévoir)
+</span>
+</div>

@@ -1,0 +1,11 @@
+.grade {
+  font-weight: bold
+}
+
+.loser {
+  color: red
+}
+
+.winner {
+  color: green
+}

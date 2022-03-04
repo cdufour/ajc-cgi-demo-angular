@@ -4,7 +4,7 @@ import { Component } from '@angular/core'
   selector: 'counter',
   template: `
     <p>Simple compteur</p>
-    <button (click)="increment()">
+    <button class="btn btn-primary" (click)="increment()">
       {{ btnText }}
     </button>
     <button (click)="decrement()">Decrement</button>

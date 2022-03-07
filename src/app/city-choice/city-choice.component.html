@@ -1,0 +1,7 @@
+<div>
+  <select (change)="handleChange($event)">
+    <option value="">Votre destination</option>
+    <option *ngFor="let city of cities">{{ city.name }}</option>
+  </select>
+  <city-show [city]="selectedCity"></city-show>
+</div>

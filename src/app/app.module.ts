@@ -10,6 +10,8 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { StudentGradeComponent } from './student-grade/student-grade.component';
 import { ChoiceComponent } from './choice/choice.component';
+import { CityChoiceComponent } from './city-choice/city-choice.component';
+import { CityShowComponent } from './city-show/city-show.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ChoiceComponent } from './choice/choice.component';
     StudentListComponent,
     StudentCardComponent,
     StudentGradeComponent,
-    ChoiceComponent
+    ChoiceComponent,
+    CityChoiceComponent,
+    CityShowComponent
   ],
   imports: [
     BrowserModule

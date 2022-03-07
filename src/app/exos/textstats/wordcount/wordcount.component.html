@@ -1,0 +1,4 @@
+<p>
+  <span *ngIf="!inputText">Nombre de mots: 0</span>
+  <span *ngIf="inputText">Nombre de mots: {{ inputText.split(' ').length }}</span>
+</p>

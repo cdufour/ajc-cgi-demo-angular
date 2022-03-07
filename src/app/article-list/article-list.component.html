@@ -1,0 +1,5 @@
+<h3>{{ message }}</h3>
+<article-card 
+  (customEvent)="handleCustomEvent($event)"
+  [article]="article"
+  *ngFor="let article of articles"></article-card>

@@ -1,3 +1,5 @@
 <div *ngIf="city !== null">
   <h3>{{ city.name }}</h3>
+  <p>Pays: {{ city.country }}</p>
+  <img [src]="'assets/images/cities/' + city.image" [alt]="city.name" />
 </div>

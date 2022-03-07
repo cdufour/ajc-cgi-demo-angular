@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { City } from '../interfaces/city.interface';
 
 @Component({
@@ -6,22 +6,22 @@ import { City } from '../interfaces/city.interface';
   templateUrl: './city-choice.component.html',
   styleUrls: ['./city-choice.component.css']
 })
-export class CityChoiceComponent implements OnInit {
+export class CityChoiceComponent {
   cities: City[] = [
     {image: "turin.jpg", name: "Turin", country: "Italie"},
     {image: "rio.jpg", name: "Rio", country: "Brésil"},
     {image: "paris.jpg", name: "Paris", country: "France"},
   ];
 
-  selectedCity: City = this.cities[0];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  selectedCity: City | null = null;
 
   handleChange(event: any) {
-
+    const cityName = event.target.value;
+    const filteredCities = 
+      this.cities.filter(city => city.name === cityName);
+    
+    this.selectedCity = (filteredCities.length > 0) 
+      ? filteredCities[0] : null;
   }
 
 }

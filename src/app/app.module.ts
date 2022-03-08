@@ -5,8 +5,8 @@ import { TodoModule } from './todo/todo.module';
 import { ExosModule } from './exos/exos.module';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { CounterComponent } from './counter.component';
+import { HelloComponent } from './intro/hello.component';
+import { CounterComponent } from './intro/counter.component';
 import { StudentsComponent } from './students/students.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentCardComponent } from './student-card/student-card.component';

@@ -9,6 +9,6 @@ Endpoint à requêter: https://www.themealdb.com/api/json/v1/1/filter.php?c=Seaf
 La serveur renvoie une réponse json
 
 La valeur du paramètre d'url "c" (ici "Seafood") sera automatiquement  
-alimentée par l'option choisie de la menu déroulant
+alimentée par l'option choisie dans le menu déroulant
 
 Exemples de catégorie: Beef, Chicken, Dessert, Lamb, Pasta

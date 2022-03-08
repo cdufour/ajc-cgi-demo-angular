@@ -1,16 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'wordcount',
   templateUrl: './wordcount.component.html',
   styleUrls: ['./wordcount.component.css']
 })
-export class WordcountComponent implements OnInit {
+export class WordcountComponent {
   @Input() inputText: string = '';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

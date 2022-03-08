@@ -1,0 +1,10 @@
+<div>
+  <h4>Ajout d'un todo</h4>
+  <input type="text" [(ngModel)]="todo.title" />
+  <input type="checkbox" [(ngModel)]="todo.completed" /> terminé
+  <button>Enregistrer</button>
+</div>
+
+<div>
+  {{ todo | json }}
+</div>

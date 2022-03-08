@@ -20,4 +20,11 @@ export class TodoFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  handleSubmit() {
+    console.log("Submit Form...");
+
+    // ToDo: poster les données du formulaire
+    // par utilisation du TodoService
+  }
+
 }

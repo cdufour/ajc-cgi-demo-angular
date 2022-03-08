@@ -1,10 +1,17 @@
 <div>
   <h4>Ajout d'un todo</h4>
-  <input type="text" [(ngModel)]="todo.title" />
-  <input type="checkbox" [(ngModel)]="todo.completed" /> terminé
-  <button>Enregistrer</button>
+  <form (submit)="handleSubmit()" #f="ngForm">
+    <input required name="title" type="text" [(ngModel)]="todo.title" />
+    <input name="completed" type="checkbox" [(ngModel)]="todo.completed" /> terminé
+    <select name="userId" [(ngModel)]="todo.userId">
+      <option value="0">Utilisateur</option>
+      <option value="1">Ali</option>
+      <option value="2">Louise</option>
+      <option value="3">Adrien</option>
+    </select>
+    <button [disabled]="f.invalid">Enregistrer</button>
+  </form>
 </div>
 
-<div>
-  {{ todo | json }}
-</div>
+<div>{{ todo | json }}</div>
+<div>{{ f.valid }}</div>

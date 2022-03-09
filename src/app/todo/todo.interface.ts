@@ -1,5 +1,5 @@
 export interface Todo {
-  id: number;
+  id?: number; // champ optionnel
   userId: number;
   title: string;
   completed: boolean;

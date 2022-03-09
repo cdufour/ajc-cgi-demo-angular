@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Todo } from './todo.interface';
+
+// API public de démonstration
+const API: string = "https://jsonplaceholder.typicode.com/todos";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +19,18 @@ export class TodoService {
   }
 
   getTodosAsync(): Observable<Todo[]> {
-    return this.http.get<Todo[]>("https://jsonplaceholder.typicode.com/todos");
+    return this.http.get<Todo[]>(API);
+  }
+
+  postTodo(todo: Todo): Observable<HttpResponse<Todo>> {
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('X-Token', 'azerty_1234');
+
+    // ToDo: vérifier, côté serveur, que le token est bien présent 
+    // dans la requête
+  
+    return this.http.post<Todo>(API, todo, { headers, observe: 'response' });
   }
 
 

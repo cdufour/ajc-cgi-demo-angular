@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { TodoModule } from './todo/todo.module';
 import { ExosModule } from './exos/exos.module';
@@ -15,6 +16,9 @@ import { ChoiceComponent } from './choice/choice.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
 import { DbmealModule } from './exos/dbmeal/dbmeal.module';
+import { RformComponent } from './rform/rform.component';
+import { DemoRouteModule } from './demo-route/demo-route.module';
+
 
 @NgModule({
   declarations: [
@@ -27,13 +31,16 @@ import { DbmealModule } from './exos/dbmeal/dbmeal.module';
     StudentGradeComponent,
     ChoiceComponent,
     ArticleListComponent,
-    ArticleCardComponent
+    ArticleCardComponent,
+    RformComponent
   ],
   imports: [
     BrowserModule,
     TodoModule,
     ExosModule,
-    DbmealModule
+    DbmealModule,
+    ReactiveFormsModule,
+    DemoRouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

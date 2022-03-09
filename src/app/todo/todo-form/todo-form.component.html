@@ -1,17 +1,32 @@
 <div>
   <h4>Ajout d'un todo</h4>
-  <form (submit)="handleSubmit()" #f="ngForm">
-    <input required name="title" type="text" [(ngModel)]="todo.title" />
+  <form (submit)="handleSubmit()" #form="ngForm">
+    <input
+      #title="ngModel" 
+      minlength="4"
+      required 
+      name="title" 
+      type="text" 
+      [(ngModel)]="todo.title" 
+    />
+    <span *ngIf="title.invalid && (title.dirty  || title.touched)">Invalid</span>
+    <span *ngIf="todo.title.length < 4">
+      Le titre doit être de longueur 4 min
+    </span>
+    
     <input name="completed" type="checkbox" [(ngModel)]="todo.completed" /> terminé
+    
     <select name="userId" [(ngModel)]="todo.userId">
       <option value="0">Utilisateur</option>
       <option value="1">Ali</option>
       <option value="2">Louise</option>
       <option value="3">Adrien</option>
     </select>
-    <button [disabled]="f.invalid">Enregistrer</button>
+    
+    <button [disabled]="form.invalid">Enregistrer</button>
   </form>
 </div>
 
 <div>{{ todo | json }}</div>
-<div>{{ f.valid }}</div>
+<div>Formulaire valide: {{ form.valid }}</div>
+<p>{{ 'Bas de CASSE' | lowercase | uppercase }}</p>

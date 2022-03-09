@@ -1,5 +1,7 @@
+import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../todo.interface';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'todo-form',
@@ -11,11 +13,10 @@ export class TodoFormComponent implements OnInit {
   todo: Todo = {
     title: "",
     userId: 0,
-    id: 0,
     completed: false
   }
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
   }
@@ -23,8 +24,12 @@ export class TodoFormComponent implements OnInit {
   handleSubmit() {
     console.log("Submit Form...");
 
-    // ToDo: poster les données du formulaire
-    // par utilisation du TodoService
+    this.todoService
+      .postTodo(this.todo)
+      .subscribe((res: HttpResponse<Todo>) => {
+        console.log(res.status);
+        console.log(res.headers.get('X-Token'))
+      })
   }
 
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DbmealModule } from './dbmeal/dbmeal.module';
 
 import { CitationComponent } from './citation/citation.component';
 import { CityChoiceComponent } from './city-choice/city-choice.component';

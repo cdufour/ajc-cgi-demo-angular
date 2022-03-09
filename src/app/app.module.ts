@@ -14,7 +14,7 @@ import { StudentGradeComponent } from './student-grade/student-grade.component';
 import { ChoiceComponent } from './choice/choice.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleCardComponent } from './article-card/article-card.component';
-//import { TodoListComponent } from './todo-list/todo-list.component';
+import { DbmealModule } from './exos/dbmeal/dbmeal.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { ArticleCardComponent } from './article-card/article-card.component';
   imports: [
     BrowserModule,
     TodoModule,
-    ExosModule
+    ExosModule,
+    DbmealModule
   ],
   providers: [],
   bootstrap: [AppComponent]

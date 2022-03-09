@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Rxjs</title>
+</head>
+<body>
+  <h1>Demo Rxjs</h1>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.5.4/rxjs.umd.min.js"></script>
+  <script>
+    const { Observable, range, map, filter } = rxjs;
+    
+    const source$ = Observable.create((observer) => {
+      observer.next("Ciao");
+      observer.next("Tutto");
+      observer.next("Bene");
+
+      // émission asynchrone
+      setTimeout(() => observer.next("coucou"), 3000);
+    });
+
+    const log = value => console.log(value);
+    const square = x => x*x;
+ 
+    const subscriber1 = source$.subscribe(log);
+    const subscriber2 = source$.pipe().subscribe(log);
+
+    //range(1,10).subscribe(value => console.log(square(value)));
+    
+    // émission de 10 valeurs
+    range(1,10)
+      .pipe(
+        map(x => x * 2),
+        map(x => x + 3),
+        filter(x => x > 10),
+        map(x => x * 10)
+      )
+      .subscribe(log);
+
+  </script>
+</body>
+</html>

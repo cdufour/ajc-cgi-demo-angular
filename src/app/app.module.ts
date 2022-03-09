@@ -18,6 +18,7 @@ import { ArticleCardComponent } from './article-card/article-card.component';
 import { DbmealModule } from './exos/dbmeal/dbmeal.module';
 import { RformComponent } from './rform/rform.component';
 import { DemoRouteModule } from './demo-route/demo-route.module';
+import { DemoTokenComponent } from './demo-token/demo-token.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DemoRouteModule } from './demo-route/demo-route.module';
     ChoiceComponent,
     ArticleListComponent,
     ArticleCardComponent,
-    RformComponent
+    RformComponent,
+    DemoTokenComponent
   ],
   imports: [
     BrowserModule,
